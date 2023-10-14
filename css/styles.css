@@ -34,6 +34,8 @@ body
   padding: 0;
   margin: 0;
   font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
   line-height: 25px;
   font-family: 'Manrope', Arial, sans-serif;
   background-color: var(--darkmoon-blue);
@@ -104,7 +106,6 @@ select:-webkit-autofill:focus {
   background-image: url(../img/path-short.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  /* border: 3px solid greenyellow; */
 }
 .hero__container {
   position: relative;
@@ -164,3 +165,43 @@ select:-webkit-autofill:focus {
   width: 396px;
   height: 444px;
 }
+
+/* FEATURES SECTION */
+.features {
+  padding-top: 270px;
+  padding-bottom: 100px;
+}
+.features__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.features__list-item {
+  max-width: 255px;
+  width: 100%;
+}
+.feature:not(:last-child) {
+  margin-right: 30px;
+}
+.feature:nth-child(2n){
+  padding-top: 48px;
+}
+.feature__img {
+  display: block;
+  width: 160px;
+  height: 164px;
+  margin-bottom: 48px;
+}
+.feature__title {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: normal;
+  margin-bottom: 23px;
+}
+.feature__text {
+  color: var(--grey);
+}
+
+/* Pricing Plan */
