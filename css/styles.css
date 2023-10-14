@@ -45,6 +45,7 @@ body
   font-family: 'Manrope', Arial, sans-serif;
   background-color: var(--darkmoon-blue);
   color: var(--white);
+  overflow-x: hidden;
 }
 img
 {
@@ -396,6 +397,9 @@ select:-webkit-autofill:focus {
 .subscription {
   padding-top: 100px;
   padding-bottom: 160px;
+  background-image: url(../img/path-long.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .subscription__inner {
   margin-left: auto;
