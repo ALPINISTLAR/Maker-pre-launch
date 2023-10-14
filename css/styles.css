@@ -24,6 +24,10 @@ html
   margin: 0;
   list-style: none;
 }
+*:focus{
+  outline: 3px dotted var(--light-blue);
+  outline-offset: 2px;
+}
 /* ----------------- */
 /* ===== body ====== */
 /* ----------------- */
@@ -72,7 +76,41 @@ select:-webkit-autofill:focus {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
+/* Logo */
+.logo{
+  display: inline-block;
+}
+.logo__img{
+  width: 120px;
+  height: 35px;
+  color: var(--white);
+  transition: 0.4s ease;
+}
+.logo:hover .logo__img{
+  color: var(--light-blue);
+}
+.logo:active{
+  opacity: 0.6;
+}
+/* Button  */
+.button {
+  color: var(--darkmoon-blue);
+  text-align: center;
+  font-weight: 800;
+  padding: 12px 18px;
+  border-radius: 24px;
+  background-color: var(--light-blue);
+  border: 2px solid var(--light-blue);
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.button:hover{
+  color: var(--white);
+  background-color: transparent;
+}
+.button:active{
+  opacity: 0.6;
+}
 /* *** CONTAINER *** */
 .container
 {
@@ -170,7 +208,7 @@ select:-webkit-autofill:focus {
 /* FEATURES SECTION */
 .features {
   padding-top: 270px;
-  padding-bottom: 100px;
+  padding-bottom: 110px;
 }
 .features__list {
   display: flex;
@@ -207,7 +245,7 @@ select:-webkit-autofill:focus {
 
 /* Pricing Plan */
 .pricing-plan {
-  padding-top: 100px;
+  padding-top: 110px;
   padding-bottom: 100px;
 }
 .pricing-plan__container{
@@ -352,4 +390,60 @@ select:-webkit-autofill:focus {
   background-image: url(../img/check-black.svg);
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+/* SUBSCRIPTION */
+.subscription {
+  padding-top: 100px;
+  padding-bottom: 160px;
+}
+.subscription__inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 476px;
+}
+.subscription__title {
+  color: var(--white);
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-bottom: 42px;
+}
+.subscription__form {
+  display: flex;
+}
+.subscription__field-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 320px;
+  width: 100%;
+  margin-right: 16px;
+}
+.subscription__field {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  padding: 12px 18px;
+  background-color: var(--kinda-blue);
+  border: 2px solid transparent;
+  color: rgb(255, 255, 255, 0.4);
+  font-weight: 800;
+}
+.subscription__field:not(:focus):not(:placeholder-shown):invalid {
+  border-color: var(--red);
+}
+.subscription__error {
+  display: none;
+  z-index: -1;
+  position: absolute;
+  color: var(--red);
+  font-size: 12px;
+  line-height: 25px;
+  padding: 4px 18px;
+}
+.subscription__field:not(:focus):not(:placeholder-shown):invalid ~
+.subscription__error {
+  display: block;
 }
