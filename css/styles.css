@@ -46,6 +46,7 @@ body
   background-color: var(--darkmoon-blue);
   color: var(--white);
   overflow-x: hidden;
+  letter-spacing: 0;
 }
 img
 {
@@ -144,6 +145,7 @@ select:-webkit-autofill:focus {
   padding-top: 105px;
   padding-bottom: 105px;
   background-image: url(../img/path-short.svg);
+  background-size: 544px 378px;
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -154,6 +156,7 @@ select:-webkit-autofill:focus {
 
 }
 .hero__content{
+  z-index: 100;
   position: relative;
   max-width: 545px;
 
@@ -210,6 +213,10 @@ select:-webkit-autofill:focus {
 .features {
   padding-top: 270px;
   padding-bottom: 110px;
+}
+.features__container{
+  display: flex;
+  justify-content: center;
 }
 .features__list {
   display: flex;
@@ -450,4 +457,106 @@ select:-webkit-autofill:focus {
 .subscription__field:not(:focus):not(:placeholder-shown):invalid ~
 .subscription__error {
   display: block;
+}
+
+@media only screen and (max-width: 772px){
+  .site-header {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .hero{
+    padding-top: 80px;
+    background-size: 386px 268px;
+  }
+  .hero__content{
+    max-width: 457px;
+  }
+  .hero__content::after{
+    bottom: -86px;
+  }
+  .hero__title{
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .hero__bg-first {
+    display: none;
+    top: -70px;
+    left: -169px;
+    width: 314px;
+    height: 356px;
+
+  }
+  .hero__bg-second {
+    display: none;
+    top: -62px;
+    right: -175px;
+    width: 317px;
+    height: 356px;
+  }
+
+  /* Features */
+  .features{
+    padding-top: 160px;
+    padding-bottom: 75px;
+  }
+  .features__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 573px;
+  }
+  .features__list-item {
+    display: flex;
+    align-items: center;
+    max-width: 515px;
+    width: 100%;
+  }
+  .feature:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  .feature{
+    padding-left: 58px;
+  }
+  .feature:nth-child(2n){
+    padding: 0;
+  }
+  .feature__img {
+    display: block;
+    width: 120px;
+    height: 124px;
+    margin-bottom: 0;
+    margin-right: 55px;
+  }
+  .feature__title{
+    margin-bottom: 11px;
+  }
+
+  /* pricing-plan  */
+  .pricing-plan{
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+.pricing-plan__title {
+  font-size: 24px;
+  line-height: normal;
+  margin-bottom: 27px;
+}
+.pricing-plan__text {
+  margin-bottom: 80px;
+}
+.pricing-plan__rates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.free-rate{
+  margin-right: 0;
+  margin-bottom: 65px;
+}
+.subscription{
+  padding-top: 70px;
+  margin-bottom: 120px;
+}
 }
